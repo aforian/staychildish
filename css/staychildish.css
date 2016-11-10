@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "‘Open Sans’", arial, helvetica, sans-serif, "Microsoft JhengHei";
+}
+@media screen and (min-width: 1000px){
+    .desktop-nav{
+        display: block;
+    }
+    .mobile-navbar,.mobile-nav{
+        display: none;
+    }
+    .theme-logo-desk{
+        width: 30%;
+        padding: 0% 5%;
+        float: left;
+    }
+    .theme-logo-desk img{
+        width: 100%;
+        height: auto;
+        float: left;
+        border-radius: 3%;
+    }
+    .theme-content-desk{
+        padding:10px 0% 2% 5%;
+        color: #454545;
+        width: 55%;
+        font-size: 18px;
+        font-style: bold;
+        text-align: left;
+        line-height: 1.8;
+        float: left;
+    }
+    .container{
+        max-width: 100%;
+        text-align: center;
+        padding: 50px 100px 20px;
+    }
+    .campaign-item{
+        width: 30%;
+        margin: 1%;
+        float: left;
+        border-color: #454545;
+        border-style: solid;
+        border-width: 1%;
+        background-color: rgba(244,175,93,0.8);
+        cursor: pointer;
+        transition: border-color 0.6s ;
+    }
+    .campaign-item:hover{
+        border-color:  azure;
+    }
+    .campaign-item:hover .campaign-content-desk{
+        text-shadow: 0px 2px 4px rgba(255,255,255,0.4);
+    }
+    .campaign-logo-desk img{
+        max-width: 90%;
+        padding: 5%;
+    }
+    .campaign-content-desk{
+        padding: 5%;
+        text-align: left;
+        color: #FFF;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+@media screen and (max-width: 999px){
+    .desktop-nav{
+        display: none;
+    }
+    .mobile-navbar,.mobile-nav{
+        display: block;
+    }
+    .theme-logo-mobile{
+        width: 80%;
+        padding: 0 10%;
+    }
+    .theme-logo-mobile img{
+        width: 80%;
+        height: auto;
+        border-radius: 3%;
+    }
+    .theme-content-mobile{
+        padding: 30px 5%;
+        color: #FFF;
+        width: 90%;
+        font-size: 18px;
+        font-style: bold;
+        text-align: center;
+        line-height: 1.6;
+        float: left;
+    }
+    .container{
+        text-align: center;
+        padding: 50px 15px 20px;
+    }
+}
+body{
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image:url(../images/image01.jpg);
+    height: 100vh;
+}
+h2{
+    text-align: center;
+    font-size: 18px;
+}
+h3{
+    font-size: 24px;
+    line-height: 1.8;
+    color: #676697;
+}
+.desktop-nav{
+    width: 94%;
+    min-height: 60px;
+    top: 0px;
+    position: fixed;
+    padding: 0px 3%;
+    z-index: 1000;
+    background-color: #454545;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+}
+.desktop-logo a img{
+    margin-top: 2px;
+    max-width: 160px;
+    height: auto;
+    float: left;
+    cursor: pointer;
+}
+.desktop-nav-menu{
+    float: right;
+    padding: 0 ;
+}
+.desktop-nav-main{
+    padding: 28px 7px 19px;
+    width: 90px;
+    color: #F4AF5B;
+    float: left;
+    cursor: pointer;
+    transition: color 0.6s ;
+}
+.desktop-nav-main img{
+    padding-top: 0px;
+    max-width: 22px;
+    float: left;
+}
+.desktop-nav-main:hover, .nav-chosen{
+    color: #ffeea6;
+    border-bottom: 3px solid #ffeea6;
+}
+
+.mobile-navbar{
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    padding: 0 5px;
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+}
+.mobile-logo img{
+    margin-top: 10px;
+    max-width: 100px;
+    height: auto;
+    float: left;
+}
+.mobile-navicon img{
+    padding: 10px;
+    padding-right: 20px;
+    max-width: 30px;
+    height: auto;
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+.mobile-nav{
+    position: fixed;
+    z-index: 1000;
+    top: 51px;
+    width: 160px;
+    max-height: 80%;
+    overflow-x: hidden;
+    transition: right 0.5s;
+    right: -161px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+}
+.mobile-nav.active{
+    right: 0px;
+}
+.mobile-nav-main{
+    position: relative;
+    padding: 15px 25px;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.right-nav{
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    right: 0.5%;
+    opacity: 0.8;
+    transform: translateY(-50%);
+    transition: opacity 0.5s;
+}
+.right-nav:hover{
+    opacity: 1;
+}
+.right-nav ul li{
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: #454545;
+    border: 2px solid #676697;
+    border-radius: 8px;
+    list-style: none;
+    cursor: pointer;
+}
+.backtop{
+    position: fixed;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    bottom: 15px;
+    right: 30px;
+    text-align: center;
+    color: #FFF;
+    line-height: 35px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.4s ;
+}
+.backtop:hover{
+    background-color: rgba(103,102,151,1);
+}
+
+.home-section{
+    background-color: rgba(0,0,0,0.3);
+    background-size: cover;
+    min-height: 100vh;
+    text-align:center;
+    overflow: hidden;
+    position: relative;
+}
+.section-title{
+    margin-top: 100px;
+}
+#homepage{
+    background-color: rgba(255,255,255,0.4);
+}
+#themeidea{
+    background-color: #f7d370;
+}
+#mindgame{
+    background-color: #ffeea6;
+    background-position: center;
+}
+#campaign{
+    background-color: #f7d370;
+}
+#footer{
+    background-color: #454545;
+    min-height: 40vh;
+    overflow: hidden;
+}
+#copyright{
+    background-color: #676697;
+    padding: 20px 30px;
+    line-height: 1.5;
+    color: #FFF;
+}
+
+.row{
+    margin: 0px auto;
+}
+
+
+.home-logo{
+    margin:50px 0 30px;
+}
+.home-logo img{
+    max-width: 200px;
+    height: auto;
+}
+.youtube-frame{
+    box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
+}
+
+.campaign-banner{
+}
+.btn{
+    width: 80px;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    color: #fff;
+    background-color: #676697;
+    border-bottom: 4px solid #515177;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background-color: #7777AF;
+}
+.scroll-page{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    float: left;
+}
+.scroll-page a img{
+    width: 50px;
+}

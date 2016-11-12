@@ -175,15 +175,10 @@ a{
 #loading{
     position: fixed;
     padding: 50vh 50%;
-    opacity: 1;
     top: 0px;
     z-index: 1000;
     text-align: center;
     background-color: #ffeea6;
-    transition: opacity 0.8s;
-}
-#loading:hover{
-    opacity: 0;
 }
 #loading-icon{
     padding: 0;

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @-webkit-keyframes scrollicon {
-    from{
+    0%{
         bottom: 10px;
         opacity: 1;
     }
@@ -17,6 +17,20 @@
         bottom: 10px;
         opacity: 1;
     }
+}
+@-webkit-keyframes loadicon {
+    0% {
+		-webkit-transform: rotate(0deg);
+	}
+    15%{
+        -webkit-transform: rotate(30deg);
+    }
+	85 {
+		-webkit-transform: rotate(330deg);
+	}
+    100% {
+		-webkit-transform: rotate(360deg);
+	}
 }
 
 *{
@@ -111,13 +125,15 @@
     }
     .theme-content-mobile{
         padding: 30px 5%;
-        color: #FFF;
+        color: #454545;
         width: 90%;
         font-size: 18px;
-        font-style: bold;
         text-align: center;
         line-height: 1.6;
         float: left;
+    }
+    .btn-mid{
+        margin: 25px calc(50% - 70px);
     }
     .container{
         text-align: center;
@@ -153,13 +169,33 @@ h4{
     color: #eee;
     margin-bottom: 20px;
 }
+a{
+    text-decoration: none;
+}
+#loading{
+    position: fixed;
+    padding: 50vh 50%;
+    opacity: 1;
+    top: 0px;
+    z-index: 1000;
+    text-align: center;
+    background-color: #ffeea6;
+    transition: opacity 0.8s;
+}
+#loading:hover{
+    opacity: 0;
+}
+#loading-icon{
+    padding: 0;
+    -webkit-animation:loadicon 1.5s infinite linear;
+}
 .desktop-nav{
     width: 94%;
     min-height: 60px;
     top: 0px;
     position: fixed;
     padding: 0px 3%;
-    z-index: 1000;
+    z-index: 999;
     background-color: #454545;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
 }
@@ -193,7 +229,7 @@ h4{
 
 .mobile-navbar{
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     top: 0px;
     left: 0px;
     width: calc(100% - 10px);
@@ -224,38 +260,46 @@ h4{
 .mobile-nav{
     background-color: #676697;
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     top: 0px;
     width: 240px;
     height: 100%;
-    padding: 25px 0;
+    padding: 0px 0;
     transition: right 0.6s ease;
     right: -240px;
 }
 .mobile-nav.active{
     right: 0px;
 }
-.mobile-nav-main{
-    position: relative;
-    padding: 15px 35px;
+.mobile-nav-main, .mobile-closeicon{
     color: #fff;
+    padding: 15px 32px;
     font-size: 24px;
     line-height: 1.5;
     cursor: pointer;
     transition: color 0.5s ease;
 }
-.mobile-nav-main:hover{
+.mobile-nav-main{
+    position: relative;
+}
+.mobile-closeicon{
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+}
+.mobile-nav-main:hover, .mobile-closeicon:hover{
     color: #f7d370;
 }
 
+
 .right-nav{
     position: fixed;
-    z-index: 1000;
+    z-index: 2;
     top: 50%;
     right: 0.5%;
     opacity: 0.8;
     transform: translateY(-50%);
-    transition: opacity,right  0.6s;
+    transition: all 0.6s;
 }
 .right-nav.active{
     right: calc(240px + 0.5%);
@@ -275,7 +319,7 @@ h4{
 }
 .backtop{
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     width: 35px;
     height: 35px;
     bottom: -40px;
@@ -286,7 +330,7 @@ h4{
     background-color: rgba(0,0,0,0.5);
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color, bottom 0.4s ;
+    transition: all 0.4s ;
 }
 .backtop.active{
     bottom: 15px;
@@ -356,12 +400,9 @@ h4{
 
 .campaign-banner{
 }
-.footer-content a{
-    text-decoration: none;
-}
+
 .btn{
     width: 80px;
-    margin-top: 10px;
     padding: 10px 30px;
     font-size: 18px;
     line-height: 1.8;
@@ -396,13 +437,9 @@ h4{
     width: 100%;
     height: 100%;
     top: 0px;
-    z-index: -1;
     background-color: #000;
     position: fixed;
-    opacity: 0;
-    transition: opacity 0.6s;
-}
-.darkcover.active{
-    z-index: 2;
+    display: none;
     opacity: 0.7;
+    z-index: 998;
 }

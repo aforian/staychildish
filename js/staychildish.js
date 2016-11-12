@@ -1,6 +1,10 @@
 $(document).ready(function(){
+    /* loading page */
+    $(window).load(function(){
+        $("#loading").fadeOut(800);
+        });
+    
     /* back top */
-    $(".desktop-logo a").on('click', goto_top);
     $(".backtop").on('click', goto_top);
     function goto_top(){
         $("html,body").animate({
@@ -41,9 +45,11 @@ $(document).ready(function(){
         }
     });
     
-    
     /* mobile-nav */
-    $(".mobile-navicon").on("click",function(){
-        $(".mobile-navbar, .mobile-nav, .home-section, .darkcover, .right-nav").toggleClass("active");
-    }); 
+    $(".mobile-closeicon").on("click", mobilemenu); 
+    $(".mobile-navicon").on("click", mobilemenu); 
+    function mobilemenu(){
+        $(".mobile-navbar, .mobile-nav, .home-section, .right-nav").toggleClass("active");
+        $(".darkcover").fadeToggle();
+    }
 })

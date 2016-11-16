@@ -1,8 +1,26 @@
 $(document).ready(function(){
+    $("#loading-icon").fadeIn(500);
     /* loading page */
-    $(window).load(function(){
+    $(window).bind('load',function(){
         $("#loading").fadeOut(800);
-        });
+        $("#loading-icon").fadeOut(800);
+    });
+    
+    /* click url */
+    $('a').click(function(e){
+        if(this.getAttribute("target") != "_blank"){
+            e.preventDefault();                   // prevent default anchor behavior
+            var goTo = this.getAttribute("href"); // store anchor href
+            $("#loading").fadeIn(600);
+            // do something while timeOut ticks ... 
+
+            setTimeout(function(){
+                 window.location = goTo;
+            },600);   
+        }
+            
+    }); 
+    
     
     /* back top */
     $(".backtop").on('click', goto_top);
@@ -22,7 +40,7 @@ $(document).ready(function(){
         });
     }
     
-    /* right-nav */
+    /* right-nav & backtop */
     for(var i=0;i<4;i++){
         $(".right-nav ul li").eq(i).on('click',{id:i},function(e){
             var n=e.data.id;
@@ -52,4 +70,5 @@ $(document).ready(function(){
         $(".mobile-navbar, .mobile-nav, .home-section, .right-nav").toggleClass("active");
         $(".darkcover").fadeToggle();
     }
+
 })

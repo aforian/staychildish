@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>童理心</title>
-    
+    <meta http-equiv="Site-Exit" Content="blendTrans(Duration=0.5)"> 
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/staychildish.js"></script>
@@ -14,10 +14,9 @@
 </head>
 <body>
     <!--loading page begin-->
-    <div id="loading">
-        <div id="loading-icon">
-            <i class="fa fa-circle-o-notch fa-2x" aria-hidden="true"></i>
-        </div>
+    <div id="loading"></div>
+    <div id="loading-icon">
+        <img src="images/loading_icon_a.svg">
     </div>
     <!--loading page end-->
     <!--first Class: nav begin-->
@@ -53,13 +52,42 @@
     </div>
     <div class="mobile-nav">
         <div class="mobile-closeicon">  
-            <i class="fa fa-times" aria-hidden="true"></i>
+            <i class="fa fa-times fa-lg" aria-hidden="true"></i>
         </div>
-        <div class="mobile-nav-main" style="margin-top:30px">首頁</div>
-        <div class="mobile-nav-main">心理測驗</div>
-        <div class="mobile-nav-main">動畫欣賞</div>
-        <div class="mobile-nav-main">活動紀錄</div>
-        <div class="mobile-nav-main">團隊介紹</div>
+        <ul class="mobile-nav-main">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="mindgame.html">心理測驗</a></li>
+            <li><a href="animate.html">動畫欣賞</a></li>
+            <li><a href="campaign.html">活動紀錄</a></li>
+            <li><a href="team.html">團隊介紹</a></li>
+        </ul>
+        <div id="mobile-footer">
+            <div class="row">
+                <div id="copyright-text">
+                    © 2016 介子流｜童理心 <br>
+                    淡江資傳15th畢展小組<br>
+                </div>
+                <div id="social">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/%E7%AB%A5%E7%90%86%E5%BF%83-1539847749673700/">
+                            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCPJYbUsxp_zvR9y_8bJQvHQ">
+                            <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://tkuic15.wixsite.com/energytone">
+                            <i class="fa fa-window-maximize fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
     </div>
     <div class="right-nav">
         <ul>
@@ -72,7 +100,6 @@
     <div class="backtop">
         <i class="fa fa-angle-up fa-lg" aria-hidden="true"></i>
     </div>
-    
     <div class="darkcover"></div>
     <!--first Class: nav end-->
     <!--second Class: homepage begin-->
@@ -128,11 +155,12 @@
                 </div>
                 <div id="mind-content" class="theme-content-desk theme-content-mobile">
                     <h3 style="color:#454545">你的童理心指數有多少？</h3>
-                    社會化是每人必經的階段，也是思想的改變，<br>
-                    孩子提早社會化，失去以往的純淨；<br>
-                    大人經過社會化後則漸漸失去童年純真的勇氣。<br>
-                    問題不再於長大，<br>
-                    而是我們忘了曾經是小孩。<br>
+                    在我們的成長當中或多或少，<br>
+                    都會受到環境的影響，讓我們變成社會化。<br>
+                    於是我們透過小小的心理測驗，<br>
+                    讓你可以測量出自己的童理心指數是多少，<br>
+                    並且給予你後續的建議與回饋。<br>
+                    <br>
                     <div class="btn btn-mid">開始測驗</div>
                 </div>
             </div>
@@ -146,7 +174,6 @@
     <!--forth Class: mindgame record end-->
     <!--fifth Class: campaign record begin-->
     <section id="campaign" class="home-section">
-        <div class="section-title"><h2>活動記錄</h2></div>
         <div class="container">
             <div class="campaign-banner">
                 <div class="campaign-item">
@@ -196,7 +223,8 @@
                     <a href="https://www.facebook.com/%E7%AB%A5%E7%90%86%E5%BF%83-1539847749673700/" target="_blank"><div class="btn">粉絲專頁</div></a>
                 </div>
                 <div class="footer-content">
-                    <h4>社會化的真相</h4>
+                    <h4>童理心主動畫</h4>
+                    <a href="https://www.youtube.com/watch?v=6hWljxajylM" target="_blank"><div class="btn">觀看預告</div></a>
                 </div>
                 <div class="footer-content">
                     <h4>童真的重要性</h4>
@@ -205,7 +233,30 @@
         </div>
     </section>
     <section id="copyright">
-        © 2016 介子流｜淡江資傳15th畢業成果展｜童理心 － All Rights Reserved Stay Childish Team
+        <div class="row">
+            <div id="copyright-text">
+                © 2016 介子流｜淡江資傳15th畢業成果展｜童理心 
+            </div>
+            <div id="social">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/%E7%AB%A5%E7%90%86%E5%BF%83-1539847749673700/">
+                            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCPJYbUsxp_zvR9y_8bJQvHQ">
+                            <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://tkuic15.wixsite.com/energytone">
+                            <i class="fa fa-window-maximize fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
     <!--sixth Class: footer end-->
 

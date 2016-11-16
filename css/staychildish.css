@@ -22,12 +22,6 @@
     0% {
 		-webkit-transform: rotate(0deg);
 	}
-    15%{
-        -webkit-transform: rotate(30deg);
-    }
-	85 {
-		-webkit-transform: rotate(330deg);
-	}
     100% {
 		-webkit-transform: rotate(360deg);
 	}
@@ -39,11 +33,13 @@
     font-family: "‘Open Sans’", arial, helvetica, sans-serif, "Microsoft JhengHei";
 }
 @media screen and (min-width: 1000px){
-    .desktop-nav{
-        display: block;
-    }
-    .mobile-navbar,.mobile-nav{
-        display: none;
+    .desktop-nav{display: block;}
+    .mobile-navbar,.mobile-nav{display: none;}
+    .container{
+        max-width: 100%;
+        text-align: center;
+        margin-top: 70px;
+        padding: 50px 100px 20px;
     }
     .theme-logo-desk{
         width: 30%;
@@ -57,20 +53,14 @@
         border-radius: 3%;
     }
     .theme-content-desk{
-        padding:10px 0% 2% 5%;
+        padding:0% 10%;
         color: #454545;
-        width: 55%;
+        width: 40%;
         font-size: 18px;
         font-style: bold;
         text-align: left;
         line-height: 1.8;
         float: left;
-    }
-    .container{
-        max-width: 100%;
-        text-align: center;
-        margin-top: 70px;
-        padding: 50px 100px 20px;
     }
     .campaign-item{
         width: 30%;
@@ -106,6 +96,19 @@
         text-align: left;
         float: left;
     }
+    #copyright{
+        max-width: 100%;
+        padding: 10px 100px;
+    }
+    #copyright-text{
+        width: 68%;
+    }
+    #social{
+        width: 28%;
+    }
+    #social ul{
+        float: right;
+    }
 }
 @media screen and (max-width: 999px){
     .desktop-nav{
@@ -115,20 +118,19 @@
         display: block;
     }
     .theme-logo-mobile{
-        width: 80%;
-        padding: 0 10%;
+        width: 95%;
+        padding: 0 2.5%;
     }
     .theme-logo-mobile img{
-        width: 80%;
+        width: 90%;
         height: auto;
         border-radius: 3%;
     }
     .theme-content-mobile{
-        padding: 30px 5%;
+        padding: 30px 2.5%;
         color: #454545;
-        width: 90%;
+        width: 95%;
         font-size: 18px;
-        text-align: center;
         line-height: 1.6;
         float: left;
     }
@@ -136,13 +138,22 @@
         margin: 25px calc(50% - 70px);
     }
     .container{
-        text-align: center;
-        padding: 50px 10% 40px;
+        padding: 50px 6% 40px;
     }
     .footer-content{
         padding:0px 25px 30px;
         width: 200px;
         text-align: left;
+        float: left;
+    }
+    #copyright{
+        max-width: 100%;
+        padding: 10px 6%;
+    }
+    #copyright-text, #social{
+        width: 100%;
+    }
+    #social ul{
         float: left;
     }
 }
@@ -171,6 +182,12 @@ h4{
 }
 a{
     text-decoration: none;
+    transition: color 0.5s ease;
+    cursor: pointer;
+    color: #fff;
+}
+a:hover{
+    color: #f7d370;
 }
 #loading{
     position: fixed;
@@ -181,8 +198,20 @@ a{
     background-color: #ffeea6;
 }
 #loading-icon{
-    padding: 0;
-    -webkit-animation:loadicon 1.5s infinite linear;
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background-image: url(../images/loading_icon_b.svg);
+    background-size: cover;
+    display: none;
+}
+#loading-icon img{
+    width: 100%;
+    height: 100%;
+    -webkit-animation:loadicon 3s infinite linear;
 }
 .desktop-nav{
     width: 94%;
@@ -257,35 +286,41 @@ a{
     position: fixed;
     z-index: 999;
     top: 0px;
-    width: 240px;
-    height: 100%;
-    padding: 0px 0;
-    transition: right 0.6s ease;
     right: -240px;
+    width: 180px;
+    height: 100%;
+    padding: 30px;
+    transition: right 0.6s ease;
+    overflow-x: scroll;
 }
 .mobile-nav.active{
     right: 0px;
 }
-.mobile-nav-main, .mobile-closeicon{
-    color: #fff;
-    padding: 15px 32px;
-    font-size: 24px;
-    line-height: 1.5;
-    cursor: pointer;
-    transition: color 0.5s ease;
-}
 .mobile-nav-main{
-    position: relative;
+    list-style: none;
+    margin: 20px 0px;
+}
+.mobile-nav-main li a{
+    width: 180px;
+    font-size: 24px;
+    line-height: 65px;
+    display: inline-block;
 }
 .mobile-closeicon{
     position: absolute;
-    z-index: 999;
+    top: 0px;
     right: 0px;
+    padding: 22px 25px;
+    z-index: 999;
 }
-.mobile-nav-main:hover, .mobile-closeicon:hover{
+.mobile-nav-main li a, .mobile-closeicon, #mobile-footer{
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.mobile-nav-main li a:hover, .mobile-closeicon:hover, #social ul li a:hover{
     color: #f7d370;
 }
-
 
 .right-nav{
     position: fixed;
@@ -312,6 +347,7 @@ a{
     list-style: none;
     cursor: pointer;
 }
+
 .backtop{
     position: fixed;
     z-index: 999;
@@ -325,93 +361,25 @@ a{
     background-color: rgba(0,0,0,0.5);
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.4s ;
+    transition: all 0.4s;
 }
 .backtop.active{
-    bottom: 15px;
+    bottom: 12px;
 }
 .backtop:hover{
     background-color: rgba(103,102,151,1);
 }
-
-.home-section{
-    background-color: rgba(0,0,0,0.3);
-    background-size: cover;
-    min-height: calc(100% - 60px);
-    text-align:center;
-    overflow: hidden;
-    position: relative;
-    left: 0px;
-    transition: left 0.6s ease;
-}
-.home-section.active{
-    left: -240px;
-}
-.section-title{
-    margin-top: 100px;
-}
-#homepage{
-    background-color: rgba(255,255,255,0.4);
-    margin-top: 60px;
-}
-#themeidea{
-    background-color: #f7d370;
-}
-#mindgame{
-    background-color: #ffeea6;
-    background-position: center;
-}
-#campaign{
-    background-color: #f7d370;
-}
-#footer{
-    background-color: #454545;
-    min-height: 40vh;
-    overflow: hidden;
-    padding-bottom: 30px;
-}
-#copyright{
-    background-color: #676697;
-    padding: 20px 30px;
-    line-height: 1.5;
-    color: #FFF;
+.darkcover{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: #000;
+    position: fixed;
+    display: none;
+    opacity: 0.7;
+    z-index: 998;
 }
 
-.row{
-    margin: 0px auto;
-}
-
-
-.home-logo{
-    margin-bottom:20px;
-}
-.home-logo img{
-    max-width: 200px;
-    height: auto;
-}
-.youtube-frame{
-    box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
-}
-
-.campaign-banner{
-}
-
-.btn{
-    width: 80px;
-    padding: 10px 30px;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: center;
-    color: #fff;
-    background-color: #676697;
-    border-bottom: 4px solid #515177;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-.btn:hover{
-    background-color: #7777AF;
-}
 .scroll-page{
     position: absolute;
     bottom: 10px;
@@ -428,13 +396,81 @@ a{
 .scroll-page a:hover{
     color: #676697;
 }
-.darkcover{
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    background-color: #000;
-    position: fixed;
-    display: none;
-    opacity: 0.7;
-    z-index: 998;
+.btn{
+    width: 80px;
+    padding: 10px 30px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    color: #fff;
+    background-color: #676697;
+    border-bottom: 4px solid #515177;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background-color: #7777AF;
+}
+
+.home-section{
+    position: relative;
+    left: 0px;
+    min-height: calc(100% - 60px);
+    background-size: cover;
+    text-align:center;
+    overflow:hidden;
+    transition: left 0.6s ease;
+}
+.home-section.active{
+    left: -240px;
+}
+#homepage{
+    background-color: rgba(255,255,255,0.5);
+    margin-top: 60px;
+}
+#themeidea, #campaign{
+    background-color: #f7d370;
+}
+#mindgame{
+    background-color: #ffeea6;
+}
+#footer{
+    background-color: #454545;
+    min-height: 40vh;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+#copyright{
+    background-color: #676697;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.row{margin: 0px auto;}
+
+.home-logo{
+    margin-bottom:20px;
+}
+.home-logo img{
+    max-width: 200px;
+    height: auto;
+}
+.youtube-frame{
+    box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
+}
+
+#copyright-text, #social{
+    padding: 10px 0px;
+    float: left;
+}
+#social ul li{
+    padding:0px 8px;
+    list-style: none;
+    text-align: right;
+    float: left;
+}
+#social ul li a{
+    transition: color 0.5s ease;
+    cursor: pointer;
 }

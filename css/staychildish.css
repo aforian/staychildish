@@ -206,7 +206,6 @@ a:hover{
     z-index: 1000;
     background-image: url(../images/loading_icon_b.svg);
     background-size: cover;
-    display: none;
 }
 #loading-icon img{
     width: 100%;
@@ -473,4 +472,7 @@ a:hover{
 #social ul li a{
     transition: color 0.5s ease;
     cursor: pointer;
+}
+.samepage-url{
+    margin: 0px;
 }

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>高度變化</title>
+    <style>
+        body {
+          width: 100%;
+          font-size: 0;
+          text-align: center;
+        }
+
+        div {
+          display: inline-block;
+          width: 50%;
+            margin: 20px 0;
+          background: green;
+          font-size: 12px;
+          position: relative;
+          vertical-align: middle;
+        }
+        div:nth-child(2n) {
+          background: orange;
+        }
+        div:before {
+          content: "";
+          display: inline-block;
+          padding-bottom: 100%;
+          vertical-align: middle;
+        }
+        div span {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 4em;
+          color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+    </div>
+    <div>
+        <span>2</span>
+    </div>
+    <div>
+        <span>3</span>
+    </div>
+    <div>
+        <span>4</span>
+    </div>
+</body>
+</html>

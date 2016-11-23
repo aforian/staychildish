@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+    <title>Block</title>
+    <style>
+        *{
+            margin: 0px auto;
+            padding: 0px;
+        }
+        @media screen and (min-width: 1000px){
+            #back-ground{
+                padding: 50px 100px;
+            }
+            .item-block{
+                width: 21%;
+                height: 150px;
+                margin: 20px 1.5%;
+            }
+        }
+        @media screen and (max-width: 999px){
+            #back-ground{
+                padding: 50px 50px;
+            }
+            .item-block{
+                width: 46%;
+                height: 175px;
+                margin: 20px 2%;
+            }
+        }
+        @media screen and (max-width: 600px){
+            #back-ground{
+                padding: 50px 25px;
+            }
+            .item-block{
+                width: 96%;
+                height: 200px;
+                margin: 20px 2%;
+            }
+        }
+        #back-ground{
+            position: relative;
+            min-width: 100%;
+            text-align: center;
+            overflow: auto;
+            background-color: #FFF;
+            min-height: 100vh;
+        }
+        .btn{
+            float: left;
+            text-align: center;
+            width: 23%;
+            padding: 30px 0;
+            margin: 20px 5%;
+            background-color: floralwhite;
+            cursor: pointer;
+        }
+        .item-block{
+            position: absolute;
+            transition: all 1s ;
+        }
+        .close-a{background-color: cornflowerblue;}
+        .close-b{background-color: darkseagreen;}
+        .close-c{background-color: coral;}
+        .close-a, .close-b, .close-c{
+            transition: all 1s ;
+        }
+        .close-a.close, .close-b.close, .close-c.close{
+            position: absolute;
+            transition: all 1s;
+            transform: scale(0,0);
+        }
+        
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".close-b, .close-c").stop().addClass('close').fadeOut(1);
+                $(".close-a").stop().fadeIn(500).removeClass('close');
+            });
+            $("#btn2").click(function(){
+                $(".close-a, .close-c").stop().addClass('close').fadeOut(1);
+                $(".close-b").stop().fadeIn(500).removeClass('close');
+            });
+            $("#btn3").click(function(){
+                $(".close-a, .close-b").stop().addClass('close').fadeOut(1);
+                $(".close-c").stop().fadeIn(500).removeClass('close');
+            });
+            $("#btn4").click(function(){
+                $(".close-a, .close-b, .close-c ").stop().fadeIn(500).removeClass('close');
+            });
+            $("#btn5").click(function(){
+                var closenum = 0;
+                if($(".item-block").hasClass('close')){
+                    closenum++;
+                }
+                alert(closenum);
+            });
+            
+            
+        })
+    </script>
+</head>
+<body>
+    <div id="btn1" class="btn">a</div>
+    <div id="btn2" class="btn">b</div>
+    <div id="btn3" class="btn">c</div>
+    <div id="btn4" class="btn">reset</div>
+    <div id="btn5" class="btn">count</div>
+    <div id="back-ground">
+        <div class="item-block close-a">1</div>
+        <div class="item-block close-b">2</div>
+        <div class="item-block close-c">3</div>
+    </div>
+</body>
+</html>

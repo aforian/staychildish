@@ -33,130 +33,126 @@
     font-family: "‘Open Sans’", arial, helvetica, sans-serif, "Microsoft JhengHei";
 }
 @media screen and (min-width: 1000px){
+    p{line-height: 2;}
     .desktop-nav{display: block;}
     .mobile-navbar,.mobile-nav{display: none;}
+    #animate-board, #campaign-board{padding: 40px 0 100px;}
     .container{
-        max-width: 100%;
-        text-align: center;
         margin-top: 70px;
         padding: 50px 100px 20px;
     }
-    .theme-logo-desk{
+    .full-content{padding:20px 15%;}
+    .title-wrap{margin: 0 20%;}
+    .go-home{left: 0%;}
+    .go-page {right: 0%;}
+    .go-home, .go-page li{margin: 0 10px;}
+    h2{
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .home-image{
         width: 30%;
         padding: 0% 5%;
         float: left;
     }
-    .theme-logo-desk img{
+    .home-image img{
         width: 100%;
         height: auto;
-        float: left;
         border-radius: 3%;
     }
-    .theme-content-desk{
+    .home-content{
         padding:0% 10%;
-        color: #454545;
         width: 40%;
-        font-size: 18px;
-        font-style: bold;
-        text-align: left;
         line-height: 1.8;
-        float: left;
-    }
-    .campaign-item{
-        width: 30%;
-        margin: 1%;
-        float: left;
-        border-color: #454545;
-        border-style: solid;
-        border-width: 1%;
-        background-color: rgba(244,175,93,0.8);
-        cursor: pointer;
-        transition: border-color 0.6s ;
-    }
-    .campaign-item:hover{
-        border-color:  azure;
-    }
-    .campaign-item:hover .campaign-content-desk{
-        text-shadow: 0px 2px 4px rgba(255,255,255,0.4);
-    }
-    .campaign-logo-desk img{
-        max-width: 90%;
-        padding: 5%;
-    }
-    .campaign-content-desk{
-        padding: 5%;
         text-align: left;
-        color: #FFF;
-        font-size: 16px;
-        line-height: 1.4;
     }
     .footer-content{
         padding:0px 2.5%;
-        width: 20%;
-        text-align: left;
-        float: left;
+        width: 25%;
     }
-    #copyright{
-        max-width: 100%;
-        padding: 10px 100px;
+    .animate-space{width: 25%;}
+    .animate-space:first-of-type{
+        width: 49%;
+        padding: 0 1% 0%;
     }
-    #copyright-text{
-        width: 68%;
+    .campaign-block{
+        margin: 1.5%;
+        width: 30%;
     }
-    #social{
-        width: 28%;
-    }
-    #social ul{
-        float: right;
-    }
+    .content-image{width: 50%;}
+    .member-block{width: 33%;}
+    #copyright{padding: 10px 100px;}
+    #copyright-text{width: 68%;}
+    #social{width: 28%;}
+    #social ul{float: right;}
 }
+
 @media screen and (max-width: 999px){
-    .desktop-nav{
-        display: none;
+    h2{
+        font-size: 30px;
+        letter-spacing: 5px;
     }
-    .mobile-navbar,.mobile-nav{
-        display: block;
-    }
-    .theme-logo-mobile{
+    p{line-height: 1.6;}
+    .desktop-nav{display: none;}
+    .mobile-navbar,.mobile-nav{display: block;}
+    .container{padding: 30px 6% 40px;}
+    .full-content{padding:20px 2.5%;}
+    .title-wrap{margin: 0 6%;}
+    .go-home{left: 0%;}
+    .go-page {right: 0%;}
+    .go-home, .go-page li:last-of-type{margin: 0 5px;}
+    .home-image{
         width: 95%;
         padding: 0 2.5%;
     }
-    .theme-logo-mobile img{
-        width: 90%;
+    .home-image img{
+        width: 60%;
         height: auto;
         border-radius: 3%;
     }
-    .theme-content-mobile{
+    .home-content{
         padding: 30px 2.5%;
-        color: #454545;
         width: 95%;
-        font-size: 18px;
         line-height: 1.6;
-        float: left;
     }
     .btn-mid{
         margin: 25px calc(50% - 70px);
     }
-    .container{
-        padding: 50px 6% 40px;
-    }
     .footer-content{
         padding:0px 25px 30px;
-        width: 200px;
-        text-align: left;
-        float: left;
+        width: 250px;
     }
-    #copyright{
-        max-width: 100%;
-        padding: 10px 6%;
+    .animate-space{width: 50%;}
+    .campaign-block{
+        height: auto;
+        margin: 2.5%;
+        width: 45%;
     }
-    #copyright-text, #social{
-        width: 100%;
-    }
-    #social ul{
-        float: left;
-    }
+    .content-image{width: 70%;}
+    .member-block{width: 50%;}
+    #copyright{padding: 10px 6%;}
+    #copyright-text, #social{width: 100%;}
+    #social ul{float: left;}
 }
+@media screen and (max-width: 480px){
+    h2{font-size: 24px;letter-spacing: 2px;}
+    .title-wrap{height: 80px;}
+    .go-home{left: 50%;margin:0  -17.5px;}
+    .go-page{left: 50%;margin-left: -70px;}
+    .go-page li:first-of-type{margin: 0 70px 0 0;}
+    .home-image img{width: 90%;}
+    .animate-space{margin-bottom: 8px;}
+    .animate-space:first-of-type{width: 100%;}
+    .campaign-block{width: 95%;}
+    .content-image{width: 100%;}
+    .member-block{width: 100%;}
+}
+
+.footer-content, .campaign-block{
+    box-sizing: border-box;
+}
+
+
 body{
     background-attachment: fixed;
     background-position: 50% 50%;
@@ -164,22 +160,34 @@ body{
     background-image:url(../images/image01.jpg);
     height: 100vh;
 }
-h2{
+h1{
     text-align: center;
     font-size: 18px;
 }
+h2{
+    font-weight: bold;
+    color: #454545;
+}
 h3{
     font-size: 24px;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #676697;
 }
-h4{
+h4,h5{
     font-size: 18px;
     line-height: 1.8;
     letter-spacing: 2px;
-    color: #eee;
     margin-bottom: 20px;
 }
+h4{color: #FFF;}
+h5{color: #454545;}
+p{
+    font-size: 16px;
+    color: #454545;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
 a{
     text-decoration: none;
     transition: color 0.5s ease;
@@ -189,21 +197,45 @@ a{
 a:hover{
     color: #f7d370;
 }
-#loading{
+blockquote{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0 5%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    border-left: 5px solid #676697;
+}
+blockquote:before{
+    content: "\201c";
+    font-size: 24px;
+    line-height: 1;
+    color: #676697;
+}
+blockquote:after{
+    content: "\201d";
+    font-size: 24px;
+    line-height: 1;
+    color: #676697;
+}
+#loading-wrap, #loading, #loading-icon{
     position: fixed;
-    padding: 50vh 50%;
-    top: 0px;
     z-index: 1000;
-    text-align: center;
+}
+#loading{
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-color: #ffeea6;
 }
 #loading-icon{
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -30px;
     width: 60px;
     height: 60px;
-    z-index: 1000;
     background-image: url(../images/loading_icon_b.svg);
     background-size: cover;
 }
@@ -234,6 +266,7 @@ a:hover{
     padding: 0 ;
 }
 .desktop-nav-main{
+    position: relative;
     padding: 28px 15px 19px;
     color: #F4AF5B;
     float: left;
@@ -299,7 +332,7 @@ a:hover{
     list-style: none;
     margin: 20px 0px;
 }
-.mobile-nav-main li a{
+.mobile-nav-main li{
     width: 180px;
     font-size: 24px;
     line-height: 65px;
@@ -312,12 +345,12 @@ a:hover{
     padding: 22px 25px;
     z-index: 999;
 }
-.mobile-nav-main li a, .mobile-closeicon, #mobile-footer{
+.mobile-nav-main li, .mobile-closeicon, #mobile-footer{
     color: #fff;
     cursor: pointer;
     transition: color 0.5s ease;
 }
-.mobile-nav-main li a:hover, .mobile-closeicon:hover, #social ul li a:hover{
+.mobile-nav-main li:hover, .mobile-closeicon:hover, #social ul li a:hover{
     color: #f7d370;
 }
 
@@ -368,7 +401,7 @@ a:hover{
 .backtop:hover{
     background-color: rgba(103,102,151,1);
 }
-.darkcover{
+.#darkcover{
     width: 100%;
     height: 100%;
     top: 0px;
@@ -424,14 +457,16 @@ a:hover{
 .home-section.active{
     left: -240px;
 }
+.home-section:first-of-type{
+    margin-top: 60px;
+}
 #homepage{
     background-color: rgba(255,255,255,0.5);
-    margin-top: 60px;
 }
 #themeidea, #campaign{
     background-color: #f7d370;
 }
-#mindgame{
+#mindgame, #campaign-board, #animate-board, #team-board{
     background-color: #ffeea6;
 }
 #footer{
@@ -441,12 +476,25 @@ a:hover{
     padding-bottom: 30px;
 }
 #copyright{
+    max-width: 100%;
     background-color: #676697;
     overflow: hidden;
     color: #FFF;
 }
 
+.container{
+    max-width: 100%;
+    text-align: center;
+    overflow: auto;
+}
 .row{margin: 0px auto;}
+.full-content{
+    box-sizing: border-box;
+    clear: left;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
 
 .home-logo{
     margin-bottom:20px;
@@ -455,10 +503,23 @@ a:hover{
     max-width: 200px;
     height: auto;
 }
+.home-content{
+    padding:0% 10%;
+    color: #454545;
+    width: 40%;
+    font-size: 18px;
+    font-style: bold;
+    text-align: left;
+    line-height: 1.8;
+    float: left;
+}
 .youtube-frame{
     box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
 }
-
+.footer-content{
+    text-align: left;
+    float: left;
+}
 #copyright-text, #social{
     padding: 10px 0px;
     float: left;
@@ -473,6 +534,187 @@ a:hover{
     transition: color 0.5s ease;
     cursor: pointer;
 }
-.samepage-url{
+
+
+.sponsor img{
+    width: 60%;
+    height: auto;
+}
+.samepage{
     margin: 0px;
+}
+
+#main-title{
+    text-align: center;
+    min-height: 0px;
+    padding: 50px 0px 40px;
+    background-color: rgba(255,255,255,0.6);
+}
+.title-wrap{
+    position: relative;
+}
+#animate-board, #campaign-board{
+    min-height: 0px;
+}
+.campaign-block{
+    position: relative;
+    color: #454545;
+    background-color: #676697;
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+    transition: background-size 0.4s;
+}
+.campaign-block:hover{
+    background-size: 110%;
+}
+.campaign-block:before{
+    content: "";
+    display: inline-block;
+    padding-bottom: 60%;
+    vertical-align: middle;
+}
+.campaign-block:hover .cb-title{
+    color: #ffeea6;
+}
+#cb-01{
+    background-image: url(../images/campaign01.jpg);
+}
+#cb-02{
+    background-image: url(../images/campaign02.jpg);
+}
+#cb-03{
+    background-image: url(../images/campaign03.png);
+}
+#cb-04{
+    background-image: url(../images/campaign04.png);
+}
+.cb-title{
+    position: absolute;
+    min-width: 200%;
+    max-height: 50%;
+    text-align: left;
+    left: 0px;
+    bottom: 0px;
+    padding: 10px;
+    line-height: 1.4;
+    color: #FFF;
+    background-color: rgba(0,0,0,0.5);
+    transition: color 0.6s;
+} 
+
+.campaign-info{
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 3%;
+    margin: 2% 0;
+    font-size: 20px;
+    list-style: square;
+    color: #676697;
+}
+.campaign-info li>p{
+    line-height: 1.5;
+}
+.content-image{
+    margin: 2% 0 4%;
+    height: auto;
+}
+
+#team-member{width: 100%;}
+.member-block{
+    float: left;
+    text-align: center;
+}
+.member-photo{
+    position: relative;
+    margin: 10%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.member-photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.member-photo:before{
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 10px rgba(255,255,255,0.3);
+    transition: all 0.5s;
+}
+.member-photo:hover:before{
+    box-shadow: inset 0 0 0 170px rgba(255,255,255,0.3);
+}
+.animate-wrap{
+    box-sizing: border-box;
+    width: 48%;
+    margin: 1%;
+    border: 2px solid #000;
+    float: left;
+}
+.animate-space{
+    box-sizing: border-box;
+    padding: 0 1% 1%;
+    float: left;
+}
+.animate-block{
+    width: 100%;
+    position: relative;
+    color: #454545;
+    background-color: #676697;
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+    transition: background-size 0.4s;
+}
+.animate-block:before{
+    content: "";
+    display: inline-block;
+    padding-bottom: 75%;
+    vertical-align: middle;
+}
+.block-url{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+}
+.go-home,.go-page{
+    position:absolute;
+    bottom:0%;
+}
+.go-home, .go-page li{
+    display: inline-block;
+    height: 35px;
+    width: 30px;
+    line-height: 35px;
+    list-style: none;
+    float: left;
+    color: #454545;
+    transition: color 0.4s;
+}
+.go-page li{
+    position:relative;
+}
+.go-home:hover, .go-page li:hover{
+    color: #676697;
+}
+
+#owl-demo .item{
+    margin: 3px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }

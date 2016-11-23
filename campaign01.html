@@ -2,14 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>童理心 Stay Childish - 童理心</title>
+    <title>耶誕時光的祝福 - 童理心</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/staychildish.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <link rel="Shortcut Icon" type="image/x-icon" href="images/webicon.ico"/>
     <link rel="stylesheet" href="css/staychildish.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
 </head>
 <body>
     <!--loading page begin-->
@@ -27,21 +31,26 @@
             <a href="index.html"><img src="images/nav_logo.svg">
         </div></a>
         <div class="desktop-nav-menu">
-            <a href="index.html" class="desktop-nav-main">
-                    <h1>童理心</h1>
-            </a>
-            <a href="mindgame.html" class="desktop-nav-main nav-chosen">
-                    <h1>心理測驗</h1>
-            </a>
-            <a href="animate.html" class="desktop-nav-main">
-                    <h1>動畫欣賞</h1>
-            </a>
-            <a href="campaign.html"  class="desktop-nav-main">
-                    <h1>活動紀錄</h1>
-            </a>
-            <a href="team.html" class="desktop-nav-main">
-                    <h1>團隊介紹</h1>
-            </a>
+            <div class="desktop-nav-main">
+                <a class="block-url" href="index.html"></a>
+                <h1>童理心</h1>
+            </div>
+            <div class="desktop-nav-main">
+                <a class="block-url" href="mindgame.html"></a>
+                <h1>心理測驗</h1>
+            </div>
+            <div class="desktop-nav-main">
+                <a class="block-url" href="animate.html"></a>
+                <h1>動畫欣賞</h1>
+            </div>
+            <div class="desktop-nav-main nav-chosen">
+                <a class="block-url" href="campaign.html"></a>
+                <h1>活動紀錄</h1>
+            </div>
+            <div class="desktop-nav-main">
+                <a class="block-url" href="team.html"></a>
+                <h1>團隊介紹</h1>
+            </div>
         </div>
     </div>
     <div class="mobile-navbar">
@@ -91,92 +100,59 @@
             </div>
         </div>
     </div>
-    <div class="right-nav">
-        <ul>
-            <li style="background-color:#676697"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
     <div class="backtop">
         <i class="fa fa-angle-up fa-lg" aria-hidden="true"></i>
     </div>
     <!--first Class: nav end-->
-    <!--second Class: homepage begin-->
-    <section id="homepage" class="home-section">
-        <div class="container" style="margin-top:0">
-            <div class="home-logo">
-                <img alt="童理心" src="images/logo01.png">
-            </div>
-            <div class="video-container">
-                <iframe class="youtube-frame" width="350px" height="197px" src="https://www.youtube.com/embed/a9jg6NPsaSk?rel=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="scroll-page">
-            <a href="#themeidea" class="samepage">
-                <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
-            </a>
-        </div>
-    </section>
-    <!--second Class: homepage end-->
     <!--third Class: themeidea begin-->
-    <section id="themeidea" class="home-section">
-        <div class="container">
-            <div class="row">
-                <div id="theme-content" class="home-content">
-                    <h3>童理心是什麼？</h3>
-                    社會化是每人必經的階段，也是思想的改變，<br>
-                    孩子提早社會化，失去以往的純淨；<br>
-                    大人經過社會化後則漸漸失去童年純真的勇氣。<br>
-                    問題不再於長大，<br>
-                    而是我們忘了曾經是小孩。<br>
-                    童真與社會化並無優劣之分，<br>
-                    我們期望在社會化與童真之間找到平衡，<br>
-                    這就是我們每個人最獨特的演化方式。<br>
-                </div>
-                <div id="theme-logo" class="home-image">
-                    <img src="images/logo02.png">
-                </div>
+    <section id="main-title" class="home-section">
+        <div class="title-wrap">
+            <h2>【耶誕時光的祝福】</h2>
+            <div class="go-home">
+                <a class="block-url" href="campaign.html"></a>
+                <i class="fa fa-home fa-2x" aria-hidden="true"></i>
             </div>
+            <ul class="go-page">
+                <li style="visibility:collapse; ">
+                    <i class="fa fa-caret-left fa-2x" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <a class="block-url" href="campaign02.html"></a>
+                    <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i>
+                </li>
+            </ul>
         </div>
-        <div class="scroll-page">
-            <a href="#mindgame" class="samepage">
-                <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
-            </a>
-        </div>
+        
     </section>
     <!--third Class: themeidea end-->
-    <!--forth Class: mindgame begin-->
-    <section id="mindgame" class="home-section">
-        <div class="container">
-            <div class="row">
-                <div id="mind-logo" class="home-image">
-                    <img src="images/logo02.png">
-                </div>
-                <div id="mind-content" class="home-content">
-                    <h3 style="color:#454545">你的童理心指數有多少？</h3>
-                    在我們的成長當中或多或少，<br>
-                    都會受到環境的影響，讓我們變成社會化。<br>
-                    於是我們透過小小的心理測驗，<br>
-                    讓你可以測量出自己的童理心指數是多少，<br>
-                    並且給予你後續的建議與回饋。<br>
-                    <br>
-                    <div class="btn btn-mid">開始測驗</div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-page">
-            <a href="#campaign" class="samepage">
-                <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
-            </a>
-        </div>
-    </section>
-    <!--forth Class: mindgame record end-->
     <!--fifth Class: campaign record begin-->
-    <section id="campaign" class="home-section">
-        <div class="container">
+    <section id="team-board" class="home-section">
+        <div class="container" style="margin-top:0px;margin-bottom:60px">
             <div class="row">
+                <div class="full-content">
+                    <h3>活動資訊</h3>
+                    <ul class="campaign-info">
+                        <li><p>日期｜2015/12/24(四)～
+                            12/25(五)</p></li>
+                        <li><p>時間｜12:00p.m.～4:00p.m.</p></li>
+                        <li><p>地點｜淡江大學小麥木桌</p></li>
+                    </ul>
+                    <img class="content-image" title="耶誕節01" src="images/campaign01.jpg">
+                    <p>這次耶誕節活動的目的是讓參與者在做公益的同時，也可以藉著寫名信片，積極面對自己的成長。參與者同時會獲得耶誕節的手工餅乾，寓意著他們重拾【童理心】的證明。</p>
+                    <p>在活動中，參與者可以用非常優惠的價格購買我們的手工餅乾，並現場寫下時光明信片，寄給未來的自己，由我們在半年後寄出。我們原本只準備了100份的數量去進行一天活動，不過多得淡江同學的熱烈支持，在第一天大受好評，所以我們特別加開了第二天的活動！</p>
+                    <p>雖然第二天的活動因為下雨而受到一點阻礙，不過最後還是順利售罊，非常謝謝大家的熱烈支持，希望大家在活動當中，也能讓自己充滿【童理心】！</p>     
+                </div>
+                <div class="full-content">
+                    <div id="owl-demo">
+                        <div class="item"><img src="images/campaign01/01.jpg" alt="耶誕活動"></div>
+                        <div class="item"><img src="images/campaign01/02.jpg" alt="耶誕活動"></div>
+                        <div class="item"><img src="images/campaign01/03.jpg" alt="耶誕活動"></div>
+                        <div class="item"><img src="images/campaign01/04.jpg" alt="耶誕活動"></div>
+                        <div class="item"><img src="images/campaign01/05.jpg" alt="耶誕活動"></div>
+                        <div class="item"><img src="images/campaign01/06.jpg" alt="耶誕活動"></div>
+                        <div class="item"><img src="images/campaign01/07.jpg" alt="耶誕活動"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

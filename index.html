@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>童理心</title>
-    <meta http-equiv="Site-Exit" Content="blendTrans(Duration=0.5)"> 
+    <title>童理心 Stay Childish - 童理心</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/staychildish.js"></script>
@@ -14,10 +13,13 @@
 </head>
 <body>
     <!--loading page begin-->
-    <div id="loading"></div>
-    <div id="loading-icon" style="background-image: url(images/loading_icon_b.svg)">
-        <img src="images/loading_icon_a.svg">
+    <div id="loading-wrap">
+        <div id="loading"></div>
+        <div id="loading-icon">
+            <img src="images/loading_icon_a.svg">
+        </div>
     </div>
+    <div id="darkcover"></div>
     <!--loading page end-->
     <!--first Class: nav begin-->
     <div class="desktop-nav">
@@ -26,19 +28,19 @@
         </div></a>
         <div class="desktop-nav-menu">
             <a href="index.html" class="desktop-nav-main nav-chosen">
-                    <h2>童理心</h2>
+                    <h1>童理心</h1>
             </a>
             <a href="mindgame.html" class="desktop-nav-main">
-                    <h2>心理測驗</h2>
+                    <h1>心理測驗</h1>
             </a>
             <a href="animate.html" class="desktop-nav-main">
-                    <h2>動畫欣賞</h2>
+                    <h1>動畫欣賞</h1>
             </a>
             <a href="campaign.html"  class="desktop-nav-main">
-                    <h2>活動紀錄</h2>
+                    <h1>活動紀錄</h1>
             </a>
             <a href="team.html" class="desktop-nav-main">
-                    <h2>團隊介紹</h2>
+                    <h1>團隊介紹</h1>
             </a>
         </div>
     </div>
@@ -55,11 +57,11 @@
             <i class="fa fa-times fa-lg" aria-hidden="true"></i>
         </div>
         <ul class="mobile-nav-main">
-            <li><a href="index.html">首頁</a></li>
-            <li><a href="mindgame.html">心理測驗</a></li>
-            <li><a href="animate.html">動畫欣賞</a></li>
-            <li><a href="campaign.html">活動紀錄</a></li>
-            <li><a href="team.html">團隊介紹</a></li>
+            <li><a class="block-url" href="index.html"></a>首頁</li>
+            <li><a class="block-url" href="mindgame.html">心理測驗</li>
+            <li><a class="block-url" href="animate.html">動畫欣賞</li>
+            <li><a class="block-url" href="campaign.html">活動紀錄</li>
+            <li><a class="block-url" href="team.html">團隊介紹</li>
         </ul>
         <div id="mobile-footer">
             <div class="row">
@@ -100,7 +102,6 @@
     <div class="backtop">
         <i class="fa fa-angle-up fa-lg" aria-hidden="true"></i>
     </div>
-    <div class="darkcover"></div>
     <!--first Class: nav end-->
     <!--second Class: homepage begin-->
     <section id="homepage" class="home-section">
@@ -123,7 +124,7 @@
     <section id="themeidea" class="home-section">
         <div class="container">
             <div class="row">
-                <div id="theme-content" class="theme-content-desk theme-content-mobile">
+                <div id="theme-content" class="home-content">
                     <h3>童理心是什麼？</h3>
                     社會化是每人必經的階段，也是思想的改變，<br>
                     孩子提早社會化，失去以往的純淨；<br>
@@ -134,7 +135,7 @@
                     我們期望在社會化與童真之間找到平衡，<br>
                     這就是我們每個人最獨特的演化方式。<br>
                 </div>
-                <div id="theme-logo" class="theme-logo-desk theme-logo-mobile">
+                <div id="theme-logo" class="home-image">
                     <img src="images/logo02.png">
                 </div>
             </div>
@@ -150,10 +151,10 @@
     <section id="mindgame" class="home-section">
         <div class="container">
             <div class="row">
-                <div id="mind-logo" class="theme-logo-desk theme-logo-mobile">
+                <div id="mind-logo" class="home-image">
                     <img src="images/logo02.png">
                 </div>
-                <div id="mind-content" class="theme-content-desk theme-content-mobile">
+                <div id="mind-content" class="home-content">
                     <h3 style="color:#454545">你的童理心指數有多少？</h3>
                     在我們的成長當中或多或少，<br>
                     都會受到環境的影響，讓我們變成社會化。<br>
@@ -175,37 +176,7 @@
     <!--fifth Class: campaign record begin-->
     <section id="campaign" class="home-section">
         <div class="container">
-            <div class="campaign-banner">
-                <div class="campaign-item">
-                    <div id="campaign-logo-1" class="campaign-logo-desk campaign-logo-mobile">
-                        <img src="images/act01/00b.jpg">
-                    </div>
-                    <div id="campaign-content" class="campaign-content-desk campaign-content-mobile">
-                        <h4>【耶誕時光的祝福】</h4>
-                        日期｜104/12/24（四）～ 12/25（五）<br>
-                        地點｜淡江大學
-                    </div>
-                </div>
-                <div class="campaign-item">
-                    <div id="campaign-logo-1" class="campaign-logo-desk campaign-logo-mobile">
-                        <img src="images/act02/02b.jpg">
-                    </div>
-                    <div id="campaign-content" class="campaign-content-desk campaign-content-mobile">
-                        <h4>【勇氣大考驗】</h4>
-                            日期｜105/3/28（一）～ 4/1（五）<br>
-                            地點｜淡江大學
-                    </div>
-                </div>
-                <div class="campaign-item">
-                    <div id="campaign-logo-1" class="campaign-logo-desk campaign-logo-mobile">
-                        <img src="images/act02/01b.jpg">
-                    </div>
-                    <div id="campaign-content" class="campaign-content-desk campaign-content-mobile">
-                        <h4>【畢業製作校內展】</h4>
-                            日期｜105/4/25（一）～ 4/29（五）<br>
-                            地點｜淡江大學 黑天鵝展示廳
-                    </div>
-                </div>
+            <div class="row">
             </div>
         </div>
     </section>
@@ -220,14 +191,15 @@
                 </div>
                 <div class="footer-content">
                     <h4>關注童理心</h4>
-                    <a href="https://www.facebook.com/%E7%AB%A5%E7%90%86%E5%BF%83-1539847749673700/" target="_blank"><div class="btn">粉絲專頁</div></a>
+                    <a title="童理心粉絲專頁" href="https://www.facebook.com/%E7%AB%A5%E7%90%86%E5%BF%83-1539847749673700/" target="_blank"><div class="btn">粉絲專頁</div></a>
                 </div>
                 <div class="footer-content">
-                    <h4>童理心主動畫</h4>
-                    <a href="https://www.youtube.com/watch?v=6hWljxajylM" target="_blank"><div class="btn">觀看預告</div></a>
+                    <h4>贊助－榛品牙醫診所</h4>
+                    <a class="sponsor" title="榛品牙醫診所粉絲專頁" href="https://www.facebook.com/cpdentalclinic/?fref=ts" target="_blank"><img src="images/sponsor01.jpg"></a>
                 </div>
                 <div class="footer-content">
-                    <h4>童真的重要性</h4>
+                    <h4>贊助－笠山</h4>
+                    <a class="sponsor" title="笠山粉絲專頁" href="https://www.facebook.com/lishanstore/?fref=ts" target="_blank"><img src="images/sponsor02.jpg"></a>
                 </div>
             </div>
         </div>

@@ -329,14 +329,16 @@ blockquote:after{
     right: 0px;
 }
 .mobile-nav-main{
+    float: left;
     list-style: none;
     margin: 20px 0px;
 }
 .mobile-nav-main li{
+    position: relative;
     width: 180px;
+    height: 65px;
     font-size: 24px;
     line-height: 65px;
-    display: inline-block;
 }
 .mobile-closeicon{
     position: absolute;
@@ -346,6 +348,7 @@ blockquote:after{
     z-index: 999;
 }
 .mobile-nav-main li, .mobile-closeicon, #mobile-footer{
+    display: inline-block;
     color: #fff;
     cursor: pointer;
     transition: color 0.5s ease;

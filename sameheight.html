@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>左右等高</title>
+        <style>
+            .container {
+                box-sizing: border-box;
+                position: relative;
+                width: 80%;
+                min-height: 200px;
+                padding: 5%;
+            }
+            .left-content {
+                position: relative;
+                float: left;
+                width: 66.7%;
+                background-color: aqua;
+            }
+            .left-content:before {
+                content: '';
+                padding-bottom: 30%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .right-content {
+                position: relative;
+                float: left;
+                width: 33.3%;
+                background-color: aquamarine;
+            }
+            .right-content:before {
+                content: '';
+                padding-bottom: 70%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left-content">123</div>
+            <div class="right-content">456</div>
+        </div>
+
+
+
+    </body>
+</html>

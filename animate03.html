@@ -2,14 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>活動紀錄 - 童理心</title>
+        <title>－前導動畫－【童理心去哪兒－小孩篇】- 童理心</title>
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/staychildish.js"></script>
         <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
         <link rel="Shortcut Icon" type="image/x-icon" href="images/webicon.ico"/>
         <link rel="stylesheet" href="css/staychildish.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
     </head>
     <body>
         <!--loading page begin-->
@@ -35,11 +39,11 @@
                     <a class="block-url" href="mindgame.html"></a>
                     <h1>心理測驗</h1>
                 </div>
-                <div class="desktop-nav-main">
+                <div class="desktop-nav-main nav-chosen">
                     <a class="block-url" href="animate.html"></a>
                     <h1>動畫欣賞</h1>
                 </div>
-                <div class="desktop-nav-main nav-chosen">
+                <div class="desktop-nav-main">
                     <a class="block-url" href="campaign.html"></a>
                     <h1>活動紀錄</h1>
                 </div>
@@ -118,43 +122,104 @@
         </div>
         <!--nav end-->
         <!--title begin-->
-        <section id="main-title" class="home-section">
-            <h2>活動紀錄</h2>
+        <section id="sub-title" class="home-section">
+            <div class="title-wrap">
+                <h2> －前導動畫－<br>【童理心去哪兒－小孩篇】</h2>
+                <div class="control-wrap">
+                    <div class="go-home">
+                        <a class="block-url" href="animate.html"></a>
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <ul class="go-page">
+                        <li>
+                            <a class="block-url" href="animate04.html"></a>
+                            <i class="fa fa-caret-left fa-2x" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <a class="block-url" href="animate02.html"></a>
+                            <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        <!--title end-->
+        <!--title  end-->
         <!--content begin-->
-        <section id="campaign-board" class="home-section">
+        <section id="video-board" class="home-section">
             <div class="container">
                 <div class="row">
-                    <div class="campaign-space">
-                        <div id="cb-01" class="campaign-block">
-                            <a class="block-url" href="campaign01.html"></a>
-                            <div class="block-title">
-                                －耶誕節－<br>【耶誕時光的祝福】
+                    <div class="full-content animate-content">
+                        <div class="video-block">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/xmNmYGXZS1E?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <div class="video-info">
+                                <p>【童理心】第一部前導動畫</p>
+                                <p>以小孩子為對象，在他們成長過程中，
+                                    會吸收到的粗俗話語，表達出童理心對於一個小孩子長大過程的影響。
+                                    當這些失去童理心的小孩成長變成大人之後，
+                                    是否又會因此影響到自己的小孩，變成一種惡性循環呢？
+                                </p>
+                            </div>
+                            <div id="video-social">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://aforian.github.io/staychildish/animate03.html" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="分享至 Facebook"><div class="share-fb"><span><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></span>Share</div></a>
+                                <a href="https://plus.google.com/share?url=https://aforian.github.io/staychildish/animate03.html" onclick="javascript:window.open(this.href,   &quot;&quot;, &quot;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&quot;);return false;" rel="nofollow" target="_blank" title="分享至Google+"><div class="share-google"><span><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></span>Share</div></a>
                             </div>
                         </div>
                     </div>
-                    <div class="campaign-space">
-                        <div id="cb-02" class="campaign-block">
-                            <a class="block-url" href="campaign02.html"></a>
-                            <div class="block-title">
-                                －宣傳週－<br>【勇氣大考驗】
+                    <div class="advice-nav">其他影片
+                        <a class="advice-next samepage">
+                            <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                        </a>
+                        <a class="advice-prev samepage">
+                            <i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div id="video-advice" class="owl-carousel">
+                        <div class="item">
+                            <div id="an-05" class="animate-block">
+                                <a class="block-url" href="animate05.html"></a>
+                                <div class="play-img">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="block-title">
+                                    －童理心－<br>【主動畫預告】
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="campaign-space">
-                        <div id="cb-03" class="campaign-block">
-                            <a class="block-url" href="campaign03.html"></a>
-                            <div class="block-title">
-                                －校內展－<br>【動畫播映＆心理測驗】
+                        <div class="item">
+                            <div id="an-04" class="animate-block">
+                                <a class="block-url" href="animate04.html"></a>
+                                <div class="play-img">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="block-title">
+                                    －前導動畫－<br>【童理心去哪兒－大人篇】
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="campaign-space">
-                        <div id="cb-04" class="campaign-block">
-                            <a class="block-url" href="campaign04.html"></a>
-                            <div class="block-title">
-                                －校外展－<br>【動畫播映＆心理測驗】
+                        <div class="item">
+                            <div id="an-02" class="animate-block">
+                                <a class="block-url" href="animate02.html"></a>
+                                <div class="play-img">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="block-title">
+                                    －童理心－<br>【Happy New Year!】
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div id="an-01" class="animate-block">
+                                <a class="block-url" href="animate01.html"></a>
+                                <div class="play-img">
+                                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="block-title">
+                                    －幕後花絮－<br>【童理心－勇氣大考驗】
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -212,5 +277,8 @@
             </div>
         </section>
         <!--footer end-->
+
+
+
     </body>
 </html>

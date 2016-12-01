@@ -39,11 +39,14 @@
     }
     p{
         line-height: 1.8;
-        margin-bottom: 15px;
+        margin-bottom: 16px;
     }
     .desktop-nav{display: block;}
     .mobile-navbar,.mobile-nav{display: none;}
     
+    #mindgame, #animation, #campaign{
+        background-size: 50%;
+    }
     #animate-board, #campaign-board{
         padding: 60px 0;
     }
@@ -59,7 +62,7 @@
         width: 50%;
         padding: 0 1% 0 0;
     }
-    
+
     #main-title{padding: 50px 0px 40px;}
     #sub-title{padding: 30px 0px 20px;}
     .title-wrap{margin: 0 20%;}
@@ -72,7 +75,7 @@
     .go-home{left: 0%;}
     .go-page {right: 0%;}
     .go-home, .go-page li{margin: 0 10px;}
-    
+
     .container{padding: 0 100px;}
     .full-content{padding:0px 15% 30px;}
     .animate-content{
@@ -103,19 +106,23 @@
     }
     .content-image{width: 50%;}
     .member-block{width: 33%;}
-    
+
+    .home-video{
+        margin: 0px auto;
+        width: 350px;
+    }
     .home-image{
         width: 33.3%;
         padding: 0% 5%;
     }
     .home-image img{ width: 100%;}
     .home-content{
-        padding:0% 10%;
+        padding:0 20% 0 5%;
         width: 66.7%;
         line-height: 1.8;
         text-align: left;
     }
-    
+
     .footer-content{
         padding:0px 2.5%;
         width: 25%;
@@ -137,6 +144,9 @@
     .desktop-nav{display: none;}
     .mobile-navbar,.mobile-nav{display: block;}
     
+    #mindgame, #animation, #campaign{
+        background-size: 60%;
+    }
     #animate-board, #video-board, #campaign-board{
         padding: 40px 0;
     }
@@ -159,10 +169,10 @@
     .go-home, .go-page li:last-of-type{
         margin: 0 5px;
     }
-    
+
     .container{padding: 0 6%;}
     .full-content, animate-content{padding:0px 2.5% 20px;}
-    
+
     .animate-content{
         width: 100%;
         padding: 0 1% 20px!important;
@@ -185,10 +195,14 @@
         padding: 20px 10px;
         width: 41.6%; 
     }
-    
+
     .content-image{width: 70%;}
     .member-block{width: 50%;}
-    
+
+    .home-video{
+        margin: 0px auto;
+        width: 350px;
+    }
     .home-image{
         width: 100%;
         padding: 0 2.5%;
@@ -201,12 +215,12 @@
         width: 100%;
         line-height: 1.6;
     }
-    
+
     .btn-mid{
         margin: 0px auto;
         margin-bottom: 10px;
     }
-    
+
     #footer > .container{
         padding-bottom: 0px; 
     }
@@ -226,15 +240,18 @@
     h3{
         padding: 0 10px;
     }
-    
+
     #animate-board, #video-board, #campaign-board, #team-board{
         padding: 30px 0;
     }
     
+    #mindgame, #animation, #campaign{
+        background-size: 100%;
+    }
     .animate-space, .campaign-space{
         width: 100%;
     }
-    
+
     #main-title {
         padding: 25px 0px;
     }
@@ -254,10 +271,10 @@
     .go-home{left: 50%;margin:0  -17.5px;}
     .go-page{left: 50%;margin-left: -70px;}
     .go-page li:first-of-type{margin: 0 70px 0 0;}
-    
+
     .container{padding: 0px 3%;}
     .full-content{padding:0px 1% 10px;}
-    
+
     .video-info{
         width: 100%;
         padding: 5px;
@@ -266,7 +283,10 @@
         width: 100%;
         padding: 10px 10px;
     }
-    
+
+    .home-video{
+        width: 98%;
+    }
     .home-image img{width: 90%;padding: 10% 0;}
     .content-image{width: 100%;}
     .member-block{width: 100%;}
@@ -640,15 +660,29 @@ blockquote:after{content: "\201d";}
 #homepage{
     background-color: rgba(255,255,255,0.5);
 }
-#themeidea, #campaign{
+#themeidea, #animation{
     background-color: #f7d370;
 }
-#mindgame{
+#mindgame, #campaign{
     background-color: #ffeea6;
 }
 #campaign-board, #animate-board, #video-board,  #team-board{
     background-color: #ffeea6;
     min-height: 0px;
+}
+#themeidea, #mindgame, #animation, #campaign{
+    padding: 10% 0 70px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+#mindgame{
+    background-image: url(../images/horse02.gif);
+}
+#animation{
+    background-image: url(../images/run.gif);
+}
+#campaign{
+    background-image: url(../images/cup.gif);
 }
 
 #footer{
@@ -742,10 +776,14 @@ blockquote:after{content: "\201d";}
     -moz-border-radius: 3%;
     -webkit-border-radius: 3%;
 }
+.home-logo{
+    margin-bottom: 3%;
+}
 .home-logo img{
     max-width: 200px;
     height: auto;
 }
+
 .home-content{
     color: #454545;
     font-size: 18px;
@@ -824,7 +862,6 @@ blockquote:after{content: "\201d";}
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-
 .animate-block:hover .play-img{
     opacity: 1;
 }
@@ -858,16 +895,12 @@ blockquote:after{content: "\201d";}
     background-image: url(http://img.youtube.com/vi/6hWljxajylM/maxresdefault.jpg);
 }
 
+.video-block, .video-wrap, .video-info{
+    float: left;
+}
 .video-block{
     position: relative;
     float: left;
-}
-.video-wrap{
-    float: left;
-}
-.video-info{
-    float: left;
-    overflow: auto;
 }
 #video-social{
     display: inline-block;
@@ -898,11 +931,11 @@ blockquote:after{content: "\201d";}
     border-bottom: 3px solid #2e4a88;
 }
 .share-google {
-	background-color: #d95333;
+    background-color: #d95333;
     border-bottom: 3px solid #b7462a;
 }
 .share-fb:hover {
-	background-color: #5073c1;
+    background-color: #5073c1;
 }
 .share-google:hover {
     background-color: #ea5f3e;
@@ -1006,14 +1039,14 @@ blockquote:after{content: "\201d";}
     width: 100%;
     height: 40px;
     line-height: 40px;
-	text-align: left;
+    text-align: left;
     padding: 0 2.5%;
     color: #454545;
     border-bottom: 1px solid #454545;
 }
 .advice-prev, .advice-next {
     float: right;
-	width: 23px;
+    width: 23px;
     height: 23px;
     margin: 8.5px 2px;
     line-height: 23px;

@@ -151,7 +151,7 @@ $(document).ready(function(){
             result_img = 4;
             result_text = "恭喜你已經進入童理心童真遊樂園！你具有滿滿的童理心能夠享受生活，請繼續保持現有的童真狀態！";
         }
-        $(".result-img img").attr("src", "images/result/postcard04.jpg");
+        $(".result-img img").attr("src", "images/result/postcard0"+result_img +".jpg");
         $("#result-text").html(result_text);
         $(".quiz-wrap").fadeOut(500);
         $(".quiz-result").delay(500).fadeIn(500);

@@ -37,6 +37,7 @@ $(document).ready(function(){
     }
     
     /* right-nav & backtop */
+    var section_num = $(".home-section").length-1;
     for(var i=0;i<5;i++){
         $(".right-nav ul li").eq(i).on('click',{id:i},function(e){
             var n=e.data.id;
@@ -45,7 +46,7 @@ $(document).ready(function(){
         });
     }
     $(window).scroll(function(){
-        for(var i=0;i<5;i++){
+        for(var i=0;i<section_num;i++){
             var j=i+1; 
             if( $(window).scrollTop() >= $(".home-section").eq(i).offset().top-80 && $(window).scrollTop() < $(".home-section").eq(j).offset().top ){
                 $(".right-nav ul li").css({"background-color":"#454545"});
@@ -70,7 +71,7 @@ $(document).ready(function(){
     
     /*quiz begin & next page*/
     var bar_width= 0, page_num=0;
-    var point, totalpoint;
+    var point, totalpoint, result_img, result_text;
 
     $("#quiz-begin").click(function(){
         $(".quiz-entry").fadeOut(800);
@@ -85,7 +86,7 @@ $(document).ready(function(){
             $(":radio").parent().css({"background-color":"#ffcbbe"});
             $(":radio:checked").parent().css({"background-color":"#fff"});
         }
-        
+        return item;
     })
     
     function nextpage(){
@@ -118,16 +119,43 @@ $(document).ready(function(){
         $(".quiz-progress").css({"left":bar_width+"%"});
     }
     
-    /*count point*/
+    /*result point*/
     $("#submit").click(function(){
+        var alldone = $('input[name="q10"]:checked').val();
+        if(alldone){
+            getresult();
+        }
+        else{
+            $(":radio").parent().css({"background-color":"#ffcbbe"});
+        }
+    });
+    
+    function getresult(){
         totalpoint = 0;
         for(var i=1;i<=10;i++){
             point = $('input[name="q'+i+'"]:checked').val();
             totalpoint = totalpoint + Number(point);
         }
-        alert("你的童理心指數是："+totalpoint );
-        return totalpoint;
-    });
+        $("#result-point").html("你的童理心指數是："+totalpoint+"分！" );
+        
+        if(totalpoint<10){
+            result_img = 1;
+            result_text = "現在的你還在灰暗的街道中游走。換個心境思考或回憶小時候，或許你就能找到童真樂園的入口！";
+        }else if(totalpoint>=10 && totalpoint<20){
+            result_img = 2;
+            result_text = "你是個即將踏入童理心樂園世界的人！希望未來的你能夠在童理心樂園發現更多美好，相信你能夠更快樂！";
+        }else if(totalpoint>=20 && totalpoint<30){
+            result_img = 3;
+            result_text = "恭喜你已經進入童理心童真遊樂園！請享受與珍惜生活上的一切，偶爾放鬆發現生活上的小趣事，也許就能更有趣的生活！";
+        }else{
+            result_img = 4;
+            result_text = "恭喜你已經進入童理心童真遊樂園！你具有滿滿的童理心能夠享受生活，請繼續保持現有的童真狀態！";
+        }
+        $(".result-img img").attr("src", "../images/result/postcard0" + result_img + ".jpg");
+        $("#result-text").html(result_text);
+        $(".quiz-wrap").fadeOut(500);
+        $(".quiz-result").delay(500).fadeIn(500);
+    }
     
     /*owltheme*/
     $("#owl-demo").owlCarousel({

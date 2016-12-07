@@ -81,6 +81,17 @@
 
     .container{padding: 0 100px;}
     .full-content{padding:0px 15% 30px;}
+    
+    .quiz-entry img{
+        width: 50%;
+    }
+    .result-img {
+        width: 60%;
+    }
+    .result-content {
+        width: 40%;
+        padding: 20px 2%;
+    }
     .animate-content{
         width: 100%;
         padding: 0 2% 0px !important;
@@ -179,6 +190,16 @@
     .container{padding: 0 6%;}
     .full-content, animate-content{padding:0px 2.5% 20px;}
 
+    .quiz-entry img{
+        width: 70%;
+    }
+    .result-img {
+        width: 100%;
+    }
+    .result-content {
+        width: 100%;
+        padding: 20px 2%;
+    }
     .animate-content{
         width: 100%;
         padding: 0 1% 20px!important;
@@ -281,6 +302,9 @@
     .container{padding: 0px 3%;}
     .full-content{padding:0px 1% 10px;}
 
+    .quiz-entry img{
+        width: 100%;
+    }
     .video-info{
         width: 100%;
         padding: 5px;
@@ -805,18 +829,15 @@ blockquote:after{content: "\201d";}
     box-sizing: border-box;
     background-color: #ffeea6;
     position: absolute;
-    margin: auto;
+    padding: 50px 0px 100px;
     top: 0;
-    max-width: 100%;
     bottom: 0;
-    padding-top: 50px;
+    max-width: 100%;
     text-align: center;
     z-index: 10;
 }
 .quiz-entry img{
     position: relative;
-    width: 50%;
-    clear: both;
 }
 #quiz-begin {
     box-sizing: border-box;
@@ -898,13 +919,38 @@ blockquote:after{content: "\201d";}
     color: #fff;
     background-color: #676697;
 }
-#submit {
+#submit{
 	display: none;
 }
 .quiz-btn {
 	margin: 10px 50%;
     margin-left: calc(50% - 70px);
 }
+.quiz-result {
+    padding: 80px 0;
+	width: 100%;
+    display: none;
+}
+.result-img {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 2%;
+}
+.result-img img{
+    width: 100%;
+    height: auto;
+}
+.result-content {
+    float: left;
+    box-sizing: border-box;
+    padding: 20px 2%;
+    text-align: left;
+}
+#again, #share-test {
+	float: left;
+    margin: 10px;
+}
+
 
 .animate-space, .campaign-space{
     box-sizing: border-box;

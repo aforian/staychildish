@@ -1,15 +1,14 @@
   /* loading page */
-$(window).load(function(){
-        $("#loading").fadeOut(800);
-        $("#loading-icon").fadeOut(800);
+$(window).on("load",function(){
+        $("#loading, #loading-icon").fadeOut(800);
     });
 
 $(document).ready(function(){
     /* click url */
     $('a').click(function(e){
-        if(this.getAttribute("target") != "_blank" && !$(this).hasClass('samepage') ){
+        if( $(this).attr("target") != "_blank" && !$(this).hasClass('samepage') ){
             e.preventDefault();                   // prevent default anchor behavior
-            var goTo = this.getAttribute("href"); // store anchor href
+            var goTo = $(this).attr("href"); // store anchor href
             $("#loading").fadeIn(600);
             setTimeout(function(){
                  window.location = goTo;
@@ -83,7 +82,7 @@ $(document).ready(function(){
             nextpage();
         }
         else{
-            $(":radio").parent().css({"background-color":"#ffcbbe"});
+            $(":radio").not(":checked").parent().css({"background-color":"#ffcbbe"});
             $(":radio:checked").parent().css({"background-color":"#fff"});
         }
         return item;
@@ -136,8 +135,6 @@ $(document).ready(function(){
             point = $('input[name="q'+i+'"]:checked').val();
             totalpoint = totalpoint + Number(point);
         }
-        $("#result-point").html("你的童理心指數是："+totalpoint+"分！" );
-        
         if(totalpoint<10){
             result_img = 1;
             result_text = "現在的你還在灰暗的街道中游走。換個心境思考或回憶小時候，或許你就能找到童真樂園的入口！";
@@ -151,40 +148,12 @@ $(document).ready(function(){
             result_img = 4;
             result_text = "恭喜你已經進入童理心童真遊樂園！你具有滿滿的童理心能夠享受生活，請繼續保持現有的童真狀態！";
         }
+        $("#result-point").html("你的童理心指數是："+totalpoint+"分！" );
         $(".result-img img").attr("src", "images/result/postcard0"+result_img +".jpg");
         $("#result-text").html(result_text);
-        $(".quiz-wrap").fadeOut(500);
-        $(".quiz-result").delay(500).fadeIn(500);
+        $(".quiz-wrap").fadeOut(1000);
+        $(".quiz-result").delay(1000).fadeIn(300);
+        $("#loading,#loading-icon").fadeIn(300).delay(400).fadeOut(300); 
     }
     
-    /*owltheme*/
-    $("#owl-demo").owlCarousel({
-        itemsCustom : [
-            [1000,3],
-            [768,2],
-            [479,1],
-            [0,1]
-        ],
-        singleItem : false,
-        itemsScaleUp : false,
-    });
-    
-    var advice = $("#video-advice");
-    advice.owlCarousel({
-        items : 4,
-        itemsCustom : false,
-        itemsDesktop : [1000,3],
-        itemsTablet: [768,2],
-        itemsTabletSmall: false,
-        itemsMobile : [479,1],
-        singleItem : false,
-        itemsScaleUp : false,
-        autoPlay: true,
-    });
-     $(".advice-next").click(function(){
-        advice.trigger('owl.next');
-      })
-    $(".advice-prev").click(function(){
-        advice.trigger('owl.prev');
-      })
 })

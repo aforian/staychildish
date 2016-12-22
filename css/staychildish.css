@@ -1,36 +1,32 @@
 @charset "UTF-8";
 
+@keyframes scrollicon {
+    0% { top: 0px; opacity: 1;}
+    40% { top: 20px; opacity: 0;}
+    75% { top: 0px; opacity: 0;}
+    100% { top: 0px; opacity: 1;}
+}
 @-webkit-keyframes scrollicon {
-    0%{
-        top: 0px;
-        opacity: 1;
-    }
-    40%{
-        top: 20px;
-        opacity: 0;
-    }
-    75%{
-        top: 0px;
-        opacity: 0;
-    }
-    100%{
-        top: 0px;
-        opacity: 1;
-    }
+    0% { top: 0px; opacity: 1;}
+    40% { top: 20px; opacity: 0;}
+    75% { top: 0px; opacity: 0;}
+    100% { top: 0px; opacity: 1;}
+}
+@keyframes loadicon {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }
 @-webkit-keyframes loadicon {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
 }
-
 *{
     margin: 0;
     padding: 0;
     font-family: "‘Open Sans’", arial, helvetica, sans-serif, "Microsoft JhengHei";
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
 }
 @media screen and (min-width: 1024px){
     h2{
@@ -43,19 +39,14 @@
     }
     .desktop-nav{display: block;}
     .mobile-navbar,.mobile-nav{display: none;}
-    
     #mindgame, #animation, #campaign{
         background-size: 50%;
     }
     #animate-board, #campaign-board{
         padding: 60px 0;
     }
-    #video-board{
-        padding: 40px 0;
-    }
-    #quiz-board{
-        padding: 15px 0 30px;
-    }
+    #video-board{padding: 40px 0;}
+    #quiz-board{padding: 15px 0 30px;}
     .animate-space, .campaign-space{
         padding: 0 1% 2%;
     }
@@ -65,7 +56,6 @@
         width: 50%;
         padding: 0 1% 0 0;
     }
-
     #main-title{padding: 50px 0px 40px;}
     #sub-title{padding: 30px 0px 20px;}
     .title-wrap{margin: 0 20%;}
@@ -81,13 +71,8 @@
 
     .container{padding: 0 100px;}
     .full-content{padding:0px 15% 30px;}
-    
-    .quiz-entry img{
-        width: 50%;
-    }
-    .result-img {
-        width: 60%;
-    }
+    .quiz-entry img{width: 50%;}
+    .result-img {width: 60%;}
     .result-content {
         width: 40%;
         padding: 20px 2%;
@@ -321,14 +306,6 @@
     .content-image{width: 100%;}
     .member-block{width: 100%;}
 }
-
-
-body, blockquote, .desktop-nav, .home-section, .home-image, .home-content, .footer-content, .campaign-block, .video-block, .video-wrap, .video-info, #video-social, #team-member{
-    box-sizing: border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-}
-
 .desktop-logo a img, .desktop-nav-main, .mobile-nav-main, .mobile-logo img, .mobile-nav-main, .home-image, .home-content{
     float: left;
 }
@@ -338,10 +315,7 @@ html{
 }
 body{
     height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../images/image01.jpg);
+    background: url(../images/image01.jpg) center/cover fixed;
 }
 h1{
     text-align: center;
@@ -371,7 +345,6 @@ p{
     text-align: left;
 }
 img{height: auto;}
-
 a{
     text-decoration: none;
     cursor: pointer;
@@ -418,11 +391,14 @@ blockquote:after{content: "\201d";}
 #loading-icon{
     top: 50%;
     left: 50%;
-    margin: -30px 0 0 -30px;
     width: 60px;
     height: 60px;
-    background-image: url(../images/loading_icon_b.svg);
-    background-size: cover;
+    background: url(../images/loading_icon_b.svg) center/cover;
+    transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
 }
 #loading-icon img{
     width: 100%;
@@ -463,12 +439,11 @@ blockquote:after{content: "\201d";}
     color: #ffeea6;
     border-bottom: 3px solid #ffeea6;
 }
-
 .mobile-navbar{
     position: fixed;
     top: 0px;
     left: 0px;
-    width: calc(100% - 10px);
+    width: 100%;
     height: 60px;
     padding: 0 5px;
     background-color: #454545;
@@ -483,19 +458,23 @@ blockquote:after{content: "\201d";}
     margin-top: 5px;
     width: 120px;
 }
+.mobile-navicon{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    float: right;
+}
 .mobile-navicon img{
     position: relative;
-    padding: 15px;
-    padding-right: 20px;
-    max-width: 30px;
-    float: right;
+    width: 30px;
+    height: auto;
     cursor: pointer;
 }
 .mobile-nav{
     position: fixed;
     top: 0px;
     right: -240px;
-    width: 180px;
+    width: 240px;
     height: 100%;
     padding: 30px;
     background-color: #676697;
@@ -535,7 +514,6 @@ blockquote:after{content: "\201d";}
 .mobile-nav-main li:hover, .mobile-closeicon:hover, #social ul li a:hover{
     color: #f7d370;
 }
-
 .right-nav{
     position: fixed;
     z-index: 2;
@@ -558,6 +536,7 @@ blockquote:after{content: "\201d";}
 .right-nav ul li{
     width: 10px;
     height: 10px;
+    padding: 2px;
     margin: 10px;
     background-color: #454545;
     border: 2px solid #676697;
@@ -568,7 +547,6 @@ blockquote:after{content: "\201d";}
     list-style: none;
     cursor: pointer;
 }
-
 .backtop{
     position: fixed;
     bottom: -40px;
@@ -630,7 +608,7 @@ blockquote:after{content: "\201d";}
     color: #676697;
 }
 .btn{
-    width: 80px;
+    width: 140px;
     padding: 10px 30px;
     font-size: 18px;
     line-height: 1.8;
@@ -820,9 +798,9 @@ blockquote:after{content: "\201d";}
     float: left;
 }
 .youtube-frame{
-    box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
-    -moz-box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
-    -webkit-box-shadow: 0px 0px 3.5vw rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 3.5% rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 3.5% rgba(255,255,255,0.8);
+    -webkit-box-shadow: 0px 0px 3.5% rgba(255,255,255,0.8);
 }
 
 .quiz-entry{
@@ -1171,7 +1149,7 @@ blockquote:after{content: "\201d";}
 }
 
 #owl-demo .item{
-    margin: 3px;
+    margin: 5px;
 }
 #owl-demo .item img{
     display: block;
@@ -1179,8 +1157,6 @@ blockquote:after{content: "\201d";}
     height: auto;
 }
 #video-advice{
-    float: left;
-    position: relative;
     margin-top: 10px;
 }
 #video-advice .item{
@@ -1224,4 +1200,12 @@ blockquote:after{content: "\201d";}
 .advice-prev:hover, .advice-next:hover{
     background-color: #676697;
 }
-
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility:    hidden;
+-ms-backface-visibility:     hidden;
+-webkit-transform: translate3d(0,0,0);
+-moz-transform: translate3d(0,0,0);
+-ms-transform: translate3d(0,0,0);
+}

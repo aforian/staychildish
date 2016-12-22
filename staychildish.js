@@ -1,6 +1,35 @@
   /* loading page */
 $(window).on("load",function(){
         $("#loading, #loading-icon").fadeOut(800);
+    
+    $("#owl-demo").owlCarousel({
+        items : 4,
+        itemsCustom : false,
+        itemsDesktopSmall : [1000, 3],
+        temsTablet: [768, 2],
+        itemsMobile : [479, 1],
+        singleItem : false,
+        itemsScaleUp : false
+    });
+    
+    var advice = $("#video-advice");
+    advice.owlCarousel({
+        items : 4,
+        itemsCustom : false,
+        itemsDesktopSmall : [1000, 4],
+        itemsTablet: [768, 2],
+        itemsMobile : [479, 1],
+        itemsTabletSmall: false,
+        singleItem : false,
+        itemsScaleUp : false,
+        autoPlay: true
+    });
+     $(".advice-next").click(function(){
+        advice.trigger('owl.next');
+      })
+    $(".advice-prev").click(function(){
+        advice.trigger('owl.prev');
+      })
     });
 
 $(document).ready(function(){
